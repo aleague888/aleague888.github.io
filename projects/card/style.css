@@ -1,0 +1,325 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400;700);
+
+@font-face {
+	font-family: 'awesomeFont';
+	src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/fonts/fontawesome-webfont.woff2') format('woff2'),
+		url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/fonts/fontawesome-webfont.woff') format('woff'),
+		url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/fonts/fontawesome-webfont.ttf') format('truetype');
+}
+
+$text-color: #656565;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: $text-color;
+  
+  background: url(http://mnkythemes.com/kickstart/wp-content/uploads/2013/04/interior-blurred.jpg);
+  background-size: cover;
+  height: 100vh;
+}
+
+a {
+  color: $text-color;
+  text-decoration: none;
+  transition: color 0.2s;
+  
+  &:hover {
+    color: darken($text-color, 10%);
+  }
+}
+
+.fa {
+  font-family: 'awesomeFont';
+}
+
+#rolodex {
+  background: url(http://mongui.es/codepen/avdMXK-rolodex.png) no-repeat;
+  width: 581px;
+  height: 447px;
+  position: absolute;
+  top: calc(50% - 223px);
+  left: calc(50% - 290px);
+  
+  .controllers {
+    position: absolute;
+    top: calc(50% - 120px);
+    height: 135px;
+    width: 180px;
+    cursor: pointer;
+    
+    &:hover {
+      color: darken($text-color, 15%);
+    }
+    
+    span {
+      font-size: 80px;
+      margin-top: 20px;
+      transition: color 0.2s;
+    }
+  }
+  
+  #prev {
+    left: -90px;
+    
+    span {
+      float: left;
+      transform: rotate(-90deg);
+    }
+  }
+  
+  #next {
+    right: -90px;
+    
+    span {
+      float: right;
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.a7 {
+  display: none;
+  position: absolute;
+  
+  width: 334px;
+  height: 175px;
+  bottom: calc(50% + 64px);
+  left: calc(50% - 166px);
+  border-radius: 10px;
+  
+  transform: perspective(1000px) rotateX(12deg);
+  transform-origin: 50% calc(100% + 11px);
+  transform-style: preserve-3d;
+
+  cursor: pointer;
+  
+  .front, .back {
+    height: 100%;
+    width: 100%;
+    background-color: #eee;
+    border: 1px solid #C0C0C0;
+    border-radius: 10px;
+    padding: 0 10px;
+    backface-visibility: hidden;
+    position: absolute;
+    overflow: hidden;
+  }
+  
+  .back {
+    transform: rotateX(-180deg);
+    background: url(http://mongui.es/codepen/avdMXK-devwars.png) no-repeat;
+    background-color: #eee;
+    background-size: 100px;
+    background-position: center;
+  }
+  
+  .ribbon {
+    height: 15px;
+    width: 200%;
+    margin-left: -50%;
+  }
+  
+  h2 {
+    margin-top: 3px;
+    font-size: 20px;
+    border-bottom: 1px solid lighten($text-color, 30%);
+  }
+  
+  &.base {
+    background: none !important;
+    border: none !important;
+    display: block !important;
+    z-index: 100;
+    
+    transition: background 0.2s;
+    
+    &:hover {
+      background-color: rgba(255,255,255,0.15) !important;
+    }
+  }
+  
+  &.zoom {
+    box-shadow: 5px 5px 3px #555;
+    cursor: auto;
+    overflow: hidden;
+
+    transform: none;
+    transform-origin: none;
+  }
+  
+  &.next {
+    transform: perspective(1000px) rotateX(-135deg);
+  }
+}
+
+#card-1 {
+  .ribbon {
+    background-color: #A73CA5;
+  }
+  
+  h2 {
+    margin-bottom: -5px;
+  }
+  
+  #photo {
+    width: 100px;
+    height: 100%;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: top;
+      
+    img {
+      margin-top: 30px;
+      width: 100%;
+    }
+  }
+  
+  #my-info {
+    width: calc(100% - 125px);
+    display: inline-block;
+    
+    span {
+      display: inline-block;
+      font-size: 10px;
+      font-style: italic;
+    }
+    
+    p {
+      font-size: 12px;
+      margin-top: 4px;
+    }
+    
+    button {
+      position: absolute;
+      right: 20px;
+      bottom: 10px;
+      
+      padding: 5px 10px;
+      background-color: #ddd;
+      color: $text-color;
+      border: 1px solid #ccc;
+      cursor: pointer;
+      transition: background 0.2s;
+      
+      &:hover {
+        background-color: #eee;
+      }
+    }
+  }
+}
+
+#card-2 {
+  .ribbon {
+    background-color: #54B43C;
+  }
+  
+  h2 {
+    margin-bottom: 5px;
+  }
+  
+  .port-ctrl {
+    position: absolute;
+    bottom: 10px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  #port-prev {
+    display: none;
+  }
+  
+  #port-next {
+    right: 10px;
+  }
+  
+  #portfolio-imgs {
+    width: 200%;
+    transition: margin 1s;
+    
+    & > div {
+      text-align: center;
+      display: inline-block;
+      width: 49%;
+    }
+  
+    img {
+      display: inline-bock;
+      margin: 2px 10px;
+      width: 70px;
+      border-radius: 5px;
+    }
+  }
+}
+
+#card-3 {
+  .ribbon {
+    background-color: #FFB129;
+  }
+  
+  label {
+    margin-top: 3px;
+    display: block;
+    font-size: 12px;
+    float: left;
+    width: 45%;
+    
+    &:nth-child(2) {
+      float: right;
+      margin-left: 10%;
+    }
+    
+    &:nth-child(3) {
+      width: 100%;
+      resize: none;
+      outline: none;
+    }
+    
+    textarea,
+    input {
+      display: block;
+      width: 100%;
+      font-size: 10px;
+      padding: 2px 3px;
+    }
+  }
+  
+  button {
+    float: right;
+
+    margin-top: 5px;
+    padding: 3px 10px;
+    background-color: #ddd;
+    color: $text-color;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: background 0.2s;
+
+    &:hover {
+      background-color: #eee;
+    }
+  }
+}
+
+#card-4 {
+  .ribbon {
+    background-color: #3B6EFF;
+  }
+  
+  ul {
+    list-style: none;
+    width: 100%;
+    text-align: center;
+    
+    li {
+      display: inline-block;
+      font-size: 40px;
+      margin: 40px 10px;
+    }
+  }
+}
