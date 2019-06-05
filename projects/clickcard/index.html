@@ -1,0 +1,249 @@
+<body>
+    <head>
+        <title>ClickCard</title>
+          <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+
+    <header>
+
+        <div id="navbar" class="navbar">
+            <strong class="navbar__brand">ClickCard</strong>
+            <div class="navbar__primary">
+                <ul class="navbar__actions">
+                    <!--<li>-->
+                        <!--<a class="navbar__login" href="#">Login</a>-->
+                    <!--</li>-->
+                    <li class="navbar__menu">
+                        <a id="menuToggle" class="navbar__toggle" href="#">Menu</a>
+                    </li>
+                </ul>
+            </div>
+            <nav class="navbar__secondary">
+                <ul id="menuTarget" class="navbar__links">
+                    <li>
+                        <a href="#Process">How it Works</a>
+                    </li>
+                    <li>
+                        <a href="#Pricing">Pricing</a>
+                    </li>
+                    <!--<li>-->
+                        <!--<a href="#">FAQ</a>-->
+                    <!--</li>-->
+                </ul>
+            </nav>
+        </div>
+
+        <div class="hero">
+
+            <div class="l-postcard">
+                <div id="Postcard" class="postcard postcard--vertical">
+                    <div class="postcard__container">
+                        <div class="postcard__front">
+
+                            <div class="postcard__inner">
+                                <h2 class="postcard__title">Mail Postcards with a Click</h2>
+                                <p class="postcard__about l-wrapper-small">
+                                    <strong>Maild.io</strong> makes it easy to send postcards by mail, from the convenience of your home or office.
+                                </p>
+                                <button class="postcard__signup js-postcard-flip">Learn More<!--Signup for Free--></button>
+                            </div>
+
+                        </div>
+                        <div class="postcard__back">
+
+                            <div class="postcard__inner">
+                                <a class="postcard__return js-postcard-flip">&#8592; Go Back</a>
+                                <h2 class="postcard__title">Newsletter Signup<!--Signup for Free--></h2>
+                                <div class="l-postcard__form">
+
+                                    <form class="postcard__form"
+                                          action="http://developd.us10.list-manage1.com/subscribe/post"
+                                          method="POST">
+                                        <!-- MAILCHIMP -->
+                                        <input type="hidden" name="u" value="e4f4e337d3af7391d431782ba">
+                                        <input type="hidden" name="id" value="ff27cb389a">
+                                        <!-- END MAILCHIMP -->
+                                        <div class="input__group">
+                                            <label for="postcardName" class="postcard__label">Full Name</label>
+                                            <input id="postcardName" name="NAME" class="postcard__input" type="text" placeholder="Full Name" taborder="1" />
+                                        </div>
+                                        <div class="input__group">
+                                            <label for="postcardEmail" class="postcard__label">Email Address</label>
+                                            <input id="postcardEmail" name="EMAIL" class="postcard__input" type="email" placeholder="Email Address" taborder="2" />
+                                        </div>
+                                        <div class="input__group">
+                                            <label for="postcardZip" class="postcard__label">Zip Code</label>
+                                            <input id="postcardZip" name="ZIP" class="postcard__input" type="text" placeholder="Zip Code" taborder="3" />
+                                        </div>
+                                        <button class="postcard__submit">Signup</button><!-- Get Started -->
+                                    </form>
+
+
+                                </div>
+                                <div class="l-postcard__message">
+                                    <blockquote class="postcard__message">
+                                        You're gonna love this!
+                                        <cite>- Kyle Johnson</cite>
+                                    </blockquote>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </header>
+
+    <main class="main-content">
+
+        <section id="Process" class="section">
+
+            <div class="grid l-wrapper">
+
+                <h2 class="section__title--center">Choose Your Design</h2>
+
+                <div class="grid__half">
+
+                    <h3>Upload your Design</h3>
+
+                    <p>
+                        <img class="section__image--left" src="img/fileupload.svg" alt="Upload Design"/>
+                        <strong>Already had a design?</strong> Maild.io allows you to simply upload your design. No need to use heavy web tools to do what you want. Upload your design to get started.
+                    </p>
+
+                </div>
+
+                <div class="grid__half">
+
+                    <h3>Quick Design Tool</h3>
+
+                    <p>
+                        <img class="section__image--left" src="img/draw18.svg" alt="Quick Editor"/>
+                        <strong>Need a few changes?</strong> It's easy to add text over your photo with Maild.io's <em>quick design</em> tool. There is no need for heavy web programs. Upload your photo to get started.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="section">
+
+            <h2 class="section__title--center">Add Your Address List</h2>
+
+            <div class="grid l-wrapper">
+
+                <div class="grid__half">
+
+                    <h3>Upload your List</h3>
+
+                    <p>
+                        <img class="section__image--left" src="img/file111.svg" alt="Upload List"/>
+                        <strong>Upload your mailing list directly into the website.</strong> Maild.io will prepare the list for print. Need to make changes? Update and modify your list right in the browser from anywhere.
+                    </p>
+
+                </div>
+
+                <div class="grid__half">
+
+                    <h3>Add People Online</h3>
+
+                    <p>
+                        <img class="section__image--left" src="img/groupusers.svg" alt="Add People"/>
+                        <strong>Need to build your mailing list?</strong> Maild.io helps you manage your mailing list in the browser. Add and remove names from anywhere and on any device.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="Pricing" class="section">
+            <div class="l-wrapper-medium">
+
+                <h2 class="section__title--center">Pricing</h2>
+
+                <table class="pricing__table">
+                    <thead>
+                    <tr>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Each</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Qty. 50</td>
+                        <td>$ 87.00</td>
+                        <td>$ 1.74</td>
+                    </tr>
+                    <tr>
+                        <td>Qty. 100</td>
+                        <td>$105.00</td>
+                        <td>$ 1.05</td>
+                    </tr>
+                    <tr>
+                        <td>Qty. 200</td>
+                        <td>$146.00</td>
+                        <td>$  0.73</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <small class="postcard__notice" >
+                    Pricing is subject to change.
+                </small>
+
+            </div>
+        </section>
+
+        <!--<section id="FAQ" class="section">-->
+            <!--<div class="l-wrapper">-->
+
+                <!--<h2 class="section__title--center">Frequently Asked Questions</h2>-->
+
+                <!--<p>-->
+                    <!--Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias amet asperiores autem consequatur consequuntur dolorum est excepturi, harum maxime, minima nihil porro, possimus quidem quisquam rem reprehenderit sunt voluptatum.-->
+                <!--</p>-->
+
+            <!--</div>-->
+        <!--</section>-->
+
+    </main>
+
+    <footer class="footer">
+        <div class="l-wrapper">
+
+<!--             <span class="footer__copyright">
+                &copy; 2015 Developd.io
+            </span> -->
+
+<!--             <ul class="footer__links">
+                <li>
+                    <a href="mailto:your-account@helpful.io" data-helpful="maild" data-helpful-modal="on">Customer Support</a>
+                </li>
+            </ul> -->
+
+            <div class="l-wrapper-medium">
+                <p class="footer__about">
+                    <strong>Maild.io</strong> makes it easy to send postcards by mail, from the convenience of your home or office. Upload your design and mailing list; Maild.io will handle the rest!
+                </p>
+            </div>
+
+            <small class="footer__colophon">
+                Icons made by <a href="http://www.typicons.com" title="Stephen Hutchings">Stephen Hutchings</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a>
+            </small>
+
+        </div>
+    </footer>
+
+<!--     <script async src="https://assets.helpful.io/assets/widget.js"></script> -->
+<script src="clickcard.js"></script>
+
+</body>
+</html>
